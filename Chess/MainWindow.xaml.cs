@@ -71,12 +71,13 @@ namespace Chess
 
 
 
-        public void DrawBoard(Canvas canvas)
+        public void DrawBoard()
             {
-            Rectangle rectangle = new Rectangle();
-            rectangle.Width = canvas.Width / 8;
-            rectangle.Height = canvas.Height / 8;
-
+            for (int i = 0; i < 8; i++)
+            {
+                Juan.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(1, GridUnitType.Star) });
+                Juan.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(1, GridUnitType.Star) });
+            }
             }
 
 
